@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bb52d3b02c466f816fa3d186aee499, type: 3}
+  m_Name: LucyEmotionsAnimSet
+  m_EditorClassIdentifier: 
+  items:
+  - name: face_emotion_neutral
+    animationClip: {fileID: 0}
+  - name: face_emotion_brighten
+    animationClip: {fileID: -4550281614002503985, guid: 5aa994df784ef6e4d91d3c5e609eda96,
+      type: 3}
+  - name: face_emotion_bigwide
+    animationClip: {fileID: 3608525127610094016, guid: 10836fa531d421147b1f8fef56e6eb33,
+      type: 3}
+  - name: face_emotion_happycontent
+    animationClip: {fileID: 7316072890235190059, guid: f554b57573b9d8d499fca2be934ab059,
+      type: 3}
+  - name: face_emotion_sad
+    animationClip: {fileID: 7506210119493063215, guid: 98466324bd22194488833c16458fc18b,
+      type: 3}
+  - name: face_emotion_excitedcomfort
+    animationClip: {fileID: 7097353239978586038, guid: 8ef6421792169c749ba3c3300ab6540c,
+      type: 3}
+  - name: face_emotion_scaredworried
+    animationClip: {fileID: 465463525834501347, guid: d57bed97119cb7647b01311dbf17652a,
+      type: 3}
+  - name: face_emotion_earnestcurious
+    animationClip: {fileID: -5253784607153098184, guid: de1f685793ab8e64ca3908d2981c8a77,
+      type: 3}
+  - name: face_emotion_madannoyed
+    animationClip: {fileID: -7260899331582341847, guid: 68de14dcbe593c84d815261a56457c48,
+      type: 3}
+  - name: face_emotion_wondertrust
+    animationClip: {fileID: -8272806056954141132, guid: 1aabfe003fee105459f87d23ee4ca445,
+      type: 3}
+  - name: face_emotion_grossbored
+    animationClip: {fileID: -4681310389982828052, guid: 3bd67049c7f264443a5a029309e226fb,
+      type: 3}
