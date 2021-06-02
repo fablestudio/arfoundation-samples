@@ -2263,6 +2263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77136493c3caf4805ac5a602f75072e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftEye: {fileID: 7035649703611718667}
+  RightEye: {fileID: 7035649703611718991}
   m_CoefficientScale: 100
   m_SkinnedMeshRenderer: {fileID: 7035649703598148887}
 --- !u!1 &7035649703611744549

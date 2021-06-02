@@ -20,6 +20,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
     [RequireComponent(typeof(ARFace))]
     public class ARKitBlendShapeVisualizer : MonoBehaviour
     {
+        public Transform LeftEye;
+        public Transform RightEye;
+
         [SerializeField]
         float m_CoefficientScale = 100.0f;
 
@@ -180,25 +183,28 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 return;
             }
 
-    #if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_IOS && !UNITY_EDITOR
             using (var blendShapes = m_ARKitFaceSubsystem.GetBlendShapeCoefficients(m_Face.trackableId, Allocator.Temp))
             {
                 foreach (var featureCoefficient in blendShapes)
                 {
                     int mappedBlendShapeIndex = (int)featureCoefficient.blendShapeLocation;
-		   skinnedMeshRenderer.SetBlendShapeWeight(mappedBlendShapeIndex, featureCoefficient.coefficient * coefficientScale);
+		            skinnedMeshRenderer.SetBlendShapeWeight(mappedBlendShapeIndex, featureCoefficient.coefficient * coefficientScale);
                     /*
-		   if (m_FaceArkitBlendShapeIndexMap.TryGetValue(featureCoefficient.blendShapeLocation, out mappedBlendShapeIndex))
+		            if (m_FaceArkitBlendShapeIndexMap.TryGetValue(featureCoefficient.blendShapeLocation, out mappedBlendShapeIndex))
                     {
                         if (mappedBlendShapeIndex >= 0)
                         {
                             skinnedMeshRenderer.SetBlendShapeWeight(mappedBlendShapeIndex, featureCoefficient.coefficient * coefficientScale);
                         }
                     }
-		   */
+		            */
                 }
             }
-    #endif
+
+            LeftEye.rotation = m_Face.leftEye.rotation;
+            RightEye.rotation = m_Face.rightEye.rotation;
+#endif
         }
     }
 }
