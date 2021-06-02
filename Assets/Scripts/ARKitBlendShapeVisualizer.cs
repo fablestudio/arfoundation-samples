@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -185,14 +185,17 @@ namespace UnityEngine.XR.ARFoundation.Samples
             {
                 foreach (var featureCoefficient in blendShapes)
                 {
-                    int mappedBlendShapeIndex;
-                    if (m_FaceArkitBlendShapeIndexMap.TryGetValue(featureCoefficient.blendShapeLocation, out mappedBlendShapeIndex))
+                    int mappedBlendShapeIndex = (int)featureCoefficient.blendShapeLocation;
+		   skinnedMeshRenderer.SetBlendShapeWeight(mappedBlendShapeIndex, featureCoefficient.coefficient * coefficientScale);
+                    /*
+		   if (m_FaceArkitBlendShapeIndexMap.TryGetValue(featureCoefficient.blendShapeLocation, out mappedBlendShapeIndex))
                     {
                         if (mappedBlendShapeIndex >= 0)
                         {
                             skinnedMeshRenderer.SetBlendShapeWeight(mappedBlendShapeIndex, featureCoefficient.coefficient * coefficientScale);
                         }
                     }
+		   */
                 }
             }
     #endif
